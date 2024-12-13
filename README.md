@@ -1,27 +1,39 @@
-# SandboxNgrx
+# NgRx Todo Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
+Petit résumé de la librairie **NgRx**.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 1. **Architecture mise en place**
+```text
+src/app/state/
+├── actions/
+├── effects/
+├── models/
+├── reducers/
+├── services/
+├── app.state.ts
+```
 
-## Code scaffolding
+## 2. ** Les étapes du pattern NgRx **
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### a) **Créer les modèle pour l'entité à gérer  **
+Pour une entité `Todo`, créer l'interface `Todo` et `TodoState`.
 
-## Build
+### b) **Définir  les actions**
+Créer les et actions.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### c) **Créer les reducers associés aux actions**
+Créer les et actions.
 
-## Running unit tests
+### d) **Créer les reducers associés aux actions**
+Créer les et actions.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### e) **Effects**
+Les effects gèrent les opérations asynchrones, comme les appels API.
 
-## Running end-to-end tests
+### f) **Service pour les appels API**
+Un service Angular simule ou effectue les appels vers une API :
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### g) **Interagir avec le store**
+Le composant interagit avec le store pour afficher et gérer les Todos.

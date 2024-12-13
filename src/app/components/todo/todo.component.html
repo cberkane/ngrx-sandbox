@@ -1,0 +1,15 @@
+<div>
+  <h2>Todo List</h2>
+
+  @if (loading$ | async) {
+    <p>Loading ...</p>
+  } @else {
+    <ul>
+      @for (todo of (todos$ | async); track $index) {
+      <li>{{ todo.title }} - {{ todo.completed ? 'Done' : 'Pending' }}</li>
+      }
+    </ul>
+  }
+
+  <button (click)="addTodo()">Click me</button>
+</div>
